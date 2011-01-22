@@ -1,7 +1,7 @@
 Sending Invitations
 ==============
 
-To allow your logged in users to invite friends use the `{exp:mh_admission:invite_form}` tag. Parsed as either a single tag or a tag pair the `invite_form` tag presents your users with a method to distribute invites.
+To allow logged in users to invite friends use the `{exp:mh_admission:invite_form}` tag. Parsed as either a single tag or a tag pair the `invite_form` tag presents your users with a method to distribute invites.
 
 As a single tag it will output the following hardcoded form:
 
