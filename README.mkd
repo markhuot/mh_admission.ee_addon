@@ -29,8 +29,29 @@ As a single tag it will output the following hardcoded form:
 				<input type="text" name="mh_admission_email[]" id="mh_admission_email2" />
 			</p>
 		</fieldset>
+		<p>
+			<input type="submit" value="Send Invitations" />
+		</p>
 	</form>
 
-You can customize the display of the form with the following tag parameters:
+As a tag pair you can customize the display of the form:
+
+	{exp:mh_admission:invite_form}
+		{row}
+			<p>
+				<label for="{row_name_id}">{row_name_label}</label>
+				<input type="text" name="{row_name_name}" id="{row_name_id}" />
+			</p>
+			<p>
+				<label for="{row_email_id}">{row_email_label}</label>
+				<input type="text" name="{row_email_name}" id="{row_email_id}" />
+			</p>
+		{/row}
+		<p>
+			<input type="submit" value="Send Invitations" />
+		</p>
+	{/exp:mh_admission:invite_form}
+
+You can customize the both forms using the following parameters:
 
 * `number_of_invites="10"` defaults to allow each user to invite 10 individuals.
