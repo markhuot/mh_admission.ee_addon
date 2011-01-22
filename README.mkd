@@ -55,3 +55,9 @@ As a tag pair you can customize the display of the form:
 You can customize the both forms using the following parameters:
 
 * `number_of_invites="10"` defaults to allow each user to invite 10 individuals.
+
+Retrieving Invitations
+==============
+
+Modify the traditional register form as so:
+
