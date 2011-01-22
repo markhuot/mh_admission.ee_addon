@@ -1,0 +1,36 @@
+Sending Invitations
+==============
+
+To allow your logged in users to invite friends use the `{exp:mh_admission:invite_form}` tag. Parsed as either a single tag or a tag pair the `invite_form` tag presents your users with a method to distribute invites.
+
+As a single tag it will output the following hardcoded form:
+
+	<form method="post" action="?ACT=x">
+		<div class="hidden_fields">...EE Hidden Fields...</div>
+		<fieldset>
+			<legend>Invite 1</legend>
+			<p>
+				<label for="mh_admission_name1">Name</label>
+				<input type="text" name="mh_admission_name[]" id="mh_admission_name1" />
+			</p>
+			<p>
+				<label for="mh_admission_email1">Email</label>
+				<input type="text" name="mh_admission_email[]" id="mh_admission_email1" />
+			</p>
+		</fieldset>
+		<fieldset>
+			<legend>Invite 2</legend>
+			<p>
+				<label for="mh_admission_name2">Name</label>
+				<input type="text" name="mh_admission_name[]" id="mh_admission_name2" />
+			</p>
+			<p>
+				<label for="mh_admission_email2">Email</label>
+				<input type="text" name="mh_admission_email[]" id="mh_admission_email2" />
+			</p>
+		</fieldset>
+	</form>
+
+You can customize the display of the form with the following tag parameters:
+
+* `number_of_invites="10"` defaults to allow each user to invite 10 individuals.
