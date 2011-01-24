@@ -5,7 +5,7 @@ To allow logged in users to invite friends use the `{exp:mh_admission:invite_for
 
 As a single tag it will output the following hardcoded form:
 
-	<form method="post" action="?ACT=x">
+	<form method="post" action="...">
 		<div class="hidden_fields">...EE Hidden Fields...</div>
 		<fieldset>
 			<legend>Invite 1</legend>
@@ -52,12 +52,15 @@ As a tag pair you can customize the display of the form:
 		</p>
 	{/exp:mh_admission:invite_form}
 
+When using the tag pair method be sure to include, at the least, two inputs with names of `{row_name_name}` and `{row_email_name}`.
+
 You can customize the both forms using the following parameters:
 
 * `number_of_invites="10"` defaults to allow each user to invite 10 individuals.
 
-Retrieving Invitations
+Applying Invitations to Registration
 ==============
 
-Modify the traditional register form as so:
+You must have a member custom field named `mh_admission_code`. Create this in the EE Control Panel by navigating to the Members tab, then Custom Member Fields. From there, create a new field and give it a "Field Name" of `mh_admission_code` and a "Field Label" of your choosing. The "Field Type" should be of `Text Input` and "Text Formatting" should be set to `None`. Next, choose to make the field "required" and "visible in registration page". Finally, make sure the field is _not_ "visible in public profiles".
 
+After doing that the Admission module will check all new member registrations against their secret code to ensure the code matches the 
